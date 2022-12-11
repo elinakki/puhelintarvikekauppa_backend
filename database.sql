@@ -1,28 +1,25 @@
-drop database if exists webshop;
+drop database if exists puhelintarvikekauppa;
 
-create database webshop;
+create database puhelintarvikekauppa;
 
-use webshop;
+use puhelintarvikekauppa;
 
-create table category (
-  id int primary key auto_increment,
-  name varchar(50) not null
-);
+create table tuoteryhma (
+  trnro int primary key auto_increment,
+  trnimi varchar(50) not null
+  constraint trnimi_uniikki unique (trnimi));
+insert into tuoteryhma (trnimi) value ('Kuulokkeet');
+insert into tuoteryhma (trnimi) value ('Laturit');
+insert into tuoteryhma (trnimi) value ('Suojakuoret');
 
-create table product (
-  id int primary key auto_increment,
-  name varchar(100) not null,
-  price double (10,2) not null,
+
+create table tuote (
+  tuotenro int primary key auto_increment,
+  tuotenimi varchar(100) not null,
+  hinta double (10,2) not null,
   image varchar(50),
-  category_id int not null,
-  index category_id(category_id),
-  foreign key (category_id) references category(id)
-  on delete restrict
-);
+  trnro int not null,
+  constraint trnro_viite foreign key (trnro) references tuoteryhma (trnro));
 
-insert into category (name) values ('Kuulokkeet');
-insert into category (name) values ('Laturit');
-insert into category (name) values ('Suojakuoret');
-
-insert into product (name, price,category_id) values ('Test shoe 1',10,1);
-insert into product (name, price,category_id) values ('Test shoe 2',20,1);
+INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+	VALUES ("Nokia 3110", 100, "Nokia_3110.jpg", "Nokia 3110 on Nokian vuonna 1997 julkaistu matkapuhelin. Sen muotoilusta vastasi yhtiön silloinen muotoilujohtaja Frank Nuovo", 3);
