@@ -18,7 +18,7 @@ create table tuote (
   hinta double (10,2) not null,
   image varchar(50),
   trnro int not null,
-  constraint trnro_viite foreign key (trnro) references tuoteryhma (trnro));
+  kuvaus varchar(200));
 
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
 	VALUES ("Nokia 3110", 100, "Nokia_3110.jpg", "Nokia 3110 on Nokian vuonna 1997 julkaistu matkapuhelin. Sen muotoilusta vastasi yhtiön silloinen muotoilujohtaja Frank Nuovo", 4);
