@@ -37,8 +37,45 @@ INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
  VALUES ("iPhone 13 Pro Max", 999, "iPhone_promax.jpeg", "iPhone 13 Pro Max. Kaikkien aikojen suurin ammattitason kamerajärjestelmän päivitys. Kolme täysin uutta kameraa tarjoavat vaikuttavat kuvat ja videot hämärässä, makrokuvauksen ja ProRes-videon.", 4);
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
- VALUES ("Samsung Galaxy S21", 799, "Samsung Galaxy S21 -älypuhelimessa on 6,2 Dynamic AMOLED- näyttö 120Hz virkistystaajuudella", 4);
+ VALUES ("Samsung Galaxy S21", 799, "Samsung_s21.jpg", "Samsung Galaxy S21 -älypuhelimessa on 6,2 Dynamic AMOLED- näyttö 120Hz virkistystaajuudella", 4);
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
  VALUES ("Nokia-pikalaturi 33 W", 29, "Nokia_pikalaturi.webp", "Nokia-pikalaturi lataa laitteesi vikkelästi. 33 W:n laturissa on USB-C-latausportti, joka tukee huippunopeaa PowerDelivery 3.0 -pikalatausta. Pieni ja tyylikäs seinälaturi kulkee kevyesti mukanasi.", 2);
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
  VALUES ("Samsung Adapter USB-C", 39, "Samsung_laturi.jpg", "Alkuperäinen Samsung 45W teholaturi on pikalatausominaisuudella varustettu laadukas ja kompakti laturi, joka kulkee helposti mukanasi mihin vain.", 2);
+INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+ VALUES ("Spigen PF2004 langaton laturi", 29, "Spigen_laturi.jpg", "Kätevä Spigen PF2004 PowerArc 15W -langaton laturi on Wireless Qi teknologialla varustettu laturi, joka tehokkaasti lataa laitteen kuin laitteen.", 2);
+INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+ VALUES ("Celly USB-matkalaturi", 19, "Celly_matkalaturi.png", "Italialaisen Cellyn laadukas, tehokas ja kompakti verkkovirtalaturi neljällä USB-portilla. Kaksi porttia normaaliin lataukseen 1A ja vihreällä merkityt kaksi porttia TURBOlataukseen 2.4A.", 2);
+INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+ VALUES ("Suunto Spartan Magnetic kaapeli", 29, "Suunto_kaapeli.jpg", "Suunto Spartan Magnetic lataus- ja datakaapeli.", 2);
+INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+ VALUES ("Apple AirPods Max", 9, "aple_airpods.jpg", "Apple AirPods Max pehmeät TPU-kuoret, Kirkas, on suunniteltu suojaamaan Apple AirPods Maxien korvakuppeja.", 1);
+INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+ VALUES ("Jabra Elite 3 Langattomat napit", 39, "Jabra.avif", "Hienosäädä neljän mikrofonin tekniikkaa ja kaiutinelementtejä Jabra Sound+ -sovelluksessa.", 1);
+INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+ VALUES ("Marshall Major IV", 79, "Marshall_Major.avif", "Langaton musiikkielämys neljännen sukupolven Marshall Major -kuulokkeilla, joissa on ikoninen rokahtava design.", 1);
+INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+ VALUES ("JBL JR310 Lasten kuulokkeet", 19, "JBL_JR310.avif", "JBL:n lasten kuulokkeet hienoissa väreissä. Mukana tulee tarroja, joilla kuulokkeista saa tehtyä omannäköiset.", 1);
+INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+ VALUES ("Langattomat napit Exibel", 9, "Exibel.avif", "Huippukevyet langattomat nappikuulokkeet, joissa on Bluetooth 5.0.", 1);
+INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+ VALUES ("Huawei Honor 20", 19, "Honor_suojakuori.jpg","Inkit Style -suojakuori on täydellinen valinta sinulle, kun haluat suojata puhelimesi arjen kolhuilta ja naarmuilta.", 3);
+INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+ VALUES ("Apple iPhone 14 Pro Max", 19, "Apple_suojakuori.jpg", "Kuori suojaa puhelimesi reunat sekä takaosan persoonallisella tavalla pitäen puhelimesi profiilin silti ohuena.", 3);
+INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+ VALUES ("Samsung Galaxy A72 / A72", 19, "Samsung_suojakuori.jpg", "Pehmeistä TPU-muovisista reunoista saat tukevan otteen puhelimestasi, eikä se pääse luiskahtamaan kädestäsi.", 3);
+INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+ VALUES ("Nahkainen Puhelinlompakko", 29, "Puhelinlompakko_musta1.jpg", "Musta laadukkaasta ja kestävästä keinonahkasta tehty puhelinlompakko sulkeutuu magneeteilla ja toimii kuin käsilaukku.", 3);
+INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+ VALUES ("Vetoketjullinen Puhelinlompakko", 29, "Vetoketjullinen_Puhelinlompakko.jpg", "Koteloon mahtuu yleisesti ottaen kaikki alle 6,5 tuuman näytöllä varustetut puhelimet.", 3);
+
+
+
+
+
+
+
+
+
+
+
