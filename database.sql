@@ -42,3 +42,14 @@ INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
  VALUES ("Nokia-pikalaturi 33 W", 29, "Nokia_pikalaturi.webp", "Nokia-pikalaturi lataa laitteesi vikkelästi. 33 W:n laturissa on USB-C-latausportti, joka tukee huippunopeaa PowerDelivery 3.0 -pikalatausta. Pieni ja tyylikäs seinälaturi kulkee kevyesti mukanasi.", 2);
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
  VALUES ("Samsung Adapter USB-C", 39, "Samsung_laturi.jpg", "Alkuperäinen Samsung 45W teholaturi on pikalatausominaisuudella varustettu laadukas ja kompakti laturi, joka kulkee helposti mukanasi mihin vain.", 2);
+
+ create table asiakas (
+  asnro int primary key auto_increment,
+  asnimi varchar(100) not null,
+  email varchar(30),
+  salasana varchar(100),
+  lahiosoite varchar(30),
+  postinro char(5),
+  astili_luotu TIMESTAMP
+  DEFAULT CURRENT_TIMESTAMP not null, --constraint
+  email_uniikki unique (email));
