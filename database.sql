@@ -37,7 +37,7 @@ INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
  VALUES ("iPhone 13 Pro Max", 999, "iPhone_promax.jpeg", "iPhone 13 Pro Max. Kaikkien aikojen suurin ammattitason kamerajärjestelmän päivitys. Kolme täysin uutta kameraa tarjoavat vaikuttavat kuvat ja videot hämärässä, makrokuvauksen ja ProRes-videon.", 4);
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
- VALUES ("Samsung Galaxy S21", 799, "Samsung_s21.jpg", "Samsung Galaxy S21 -älypuhelimessa on 6,2 Dynamic AMOLED- näyttö 120Hz virkistystaajuudella", 4);
+ VALUES ("Samsung Galaxy S21", 799, "Samsung Galaxy S21 -älypuhelimessa on 6,2 Dynamic AMOLED- näyttö 120Hz virkistystaajuudella", 4);
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
  VALUES ("Nokia-pikalaturi 33 W", 29, "Nokia_pikalaturi.webp", "Nokia-pikalaturi lataa laitteesi vikkelästi. 33 W:n laturissa on USB-C-latausportti, joka tukee huippunopeaa PowerDelivery 3.0 -pikalatausta. Pieni ja tyylikäs seinälaturi kulkee kevyesti mukanasi.", 2);
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
@@ -79,3 +79,14 @@ INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
 
 
 
+
+ create table asiakas (
+  asnro int primary key auto_increment,
+  asnimi varchar(100) not null,
+  email varchar(30),
+  salasana varchar(100),
+  lahiosoite varchar(30),
+  postinro char(5),
+  astili_luotu TIMESTAMP
+  DEFAULT CURRENT_TIMESTAMP not null, --constraint
+        email_uniikki unique (email));
