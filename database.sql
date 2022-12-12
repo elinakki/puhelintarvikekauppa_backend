@@ -39,6 +39,6 @@ INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
  VALUES ("Samsung Galaxy S21", 799, "Samsung Galaxy S21 -älypuhelimessa on 6,2 Dynamic AMOLED- näyttö 120Hz virkistystaajuudella", 4);
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
- VALUES ("Nokia-pikalaturi 33 W", 29, "Nokia-pikalaturi lataa laitteesi vikkelästi. 33 W:n laturissa on USB-C-latausportti, joka tukee huippunopeaa PowerDelivery 3.0 -pikalatausta. Pieni ja tyylikäs seinälaturi kulkee kevyesti mukanasi.", 2);
+ VALUES ("Nokia-pikalaturi 33 W", 29, "Nokia_pikalaturi.webp", "Nokia-pikalaturi lataa laitteesi vikkelästi. 33 W:n laturissa on USB-C-latausportti, joka tukee huippunopeaa PowerDelivery 3.0 -pikalatausta. Pieni ja tyylikäs seinälaturi kulkee kevyesti mukanasi.", 2);
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
- VALUES ()
+ VALUES ("Samsung Adapter USB-C", 39, "Samsung_laturi.jpg", "Alkuperäinen Samsung 45W teholaturi on pikalatausominaisuudella varustettu laadukas ja kompakti laturi, joka kulkee helposti mukanasi mihin vain.", 2);
