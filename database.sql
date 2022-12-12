@@ -6,8 +6,7 @@ use puhelintarvikekauppa;
 
 create table tuoteryhma (
   trnro int primary key auto_increment,
-  trnimi varchar(50) not null
-  constraint trnimi_uniikki unique (trnimi));
+  trnimi varchar(50) not null);
 insert into tuoteryhma (trnimi) value ('Kuulokkeet');
 insert into tuoteryhma (trnimi) value ('Laturit');
 insert into tuoteryhma (trnimi) value ('Suojakuoret');
@@ -39,3 +38,7 @@ INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
  VALUES ("iPhone 13 Pro Max", 999, "iPhone_promax.jpeg", "iPhone 13 Pro Max. Kaikkien aikojen suurin ammattitason kamerajärjestelmän päivitys. Kolme täysin uutta kameraa tarjoavat vaikuttavat kuvat ja videot hämärässä, makrokuvauksen ja ProRes-videon.", 4);
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
  VALUES ("Samsung Galaxy S21", 799, "Samsung Galaxy S21 -älypuhelimessa on 6,2 Dynamic AMOLED- näyttö 120Hz virkistystaajuudella", 4);
+INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+ VALUES ("Nokia-pikalaturi 33 W", 29, "Nokia-pikalaturi lataa laitteesi vikkelästi. 33 W:n laturissa on USB-C-latausportti, joka tukee huippunopeaa PowerDelivery 3.0 -pikalatausta. Pieni ja tyylikäs seinälaturi kulkee kevyesti mukanasi.", 2);
+INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
+ VALUES ()
