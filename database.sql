@@ -37,4 +37,4 @@ INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
  VALUES ("iPhone 13 Pro Max", 999, "iPhone_promax.jpeg", "iPhone 13 Pro Max. Kaikkien aikojen suurin ammattitason kamerajärjestelmän päivitys. Kolme täysin uutta kameraa tarjoavat vaikuttavat kuvat ja videot hämärässä, makrokuvauksen ja ProRes-videon.", 4);
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
- VALUES ("Samsung Galaxy S21", 799, "Samsung Galaxy S21 -älypuhelimessa on 6,2 Dynamic AMOLED- näyttö 120Hz virkistystaajuudella", 4);
+ VALUES ("Samsung Galaxy S21", 799,"Samsung_s22.jpeg", "Samsung Galaxy S21 -älypuhelimessa on 6,2 Dynamic AMOLED- näyttö 120Hz virkistystaajuudella", 4);
