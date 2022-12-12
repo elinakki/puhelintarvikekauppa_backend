@@ -52,4 +52,4 @@ INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
   postinro char(5),
   astili_luotu TIMESTAMP
   DEFAULT CURRENT_TIMESTAMP not null, --constraint
-  email_uniikki unique (email));
+        email_uniikki unique (email));
