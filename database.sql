@@ -101,16 +101,12 @@ CREATE TABLE tilaus (
  REFERENCES asiakas (asnro));
 
 
--- en saanu ajettua tätä vielä ilman erroria
+-- sain tän vaan ilman viiteavain määrittelyjä ajettua oikein jostain syystä
 CREATE TABLE tilausrivi (
  tilausnro INTEGER,
  rivinro SMALLINT,
  tuotenimi VARCHAR(100) NOT NULL,
  kpl INTEGER NOT NULL,
- PRIMARY KEY (tilausnro, rivinro),
- FOREIGN KEY (tilausnro)
- REFERENCES tilaus (tilausnro),
- FOREIGN KEY (tuotenimi)
- REFERENCES tuote (tuotenimi));
+ PRIMARY KEY (tilausnro, rivinro));
 
 
