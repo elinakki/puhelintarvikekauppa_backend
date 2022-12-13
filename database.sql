@@ -100,4 +100,17 @@ CREATE TABLE tilaus (
  FOREIGN KEY (asnro)
  REFERENCES asiakas (asnro));
 
- 
+
+-- en saanu ajettua tätä vielä ilman erroria
+CREATE TABLE tilausrivi (
+ tilausnro INTEGER,
+ rivinro SMALLINT,
+ tuotenimi VARCHAR(100) NOT NULL,
+ kpl INTEGER NOT NULL,
+ PRIMARY KEY (tilausnro, rivinro),
+ FOREIGN KEY (tilausnro)
+ REFERENCES tilaus (tilausnro),
+ FOREIGN KEY (tuotenimi)
+ REFERENCES tuote (tuotenimi));
+
+
