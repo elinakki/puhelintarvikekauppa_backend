@@ -83,10 +83,21 @@ INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
  create table asiakas (
   asnro int primary key auto_increment,
   asnimi varchar(100) not null,
-  email varchar(30),
+  email varchar(30) UNIQUE,
   salasana varchar(100),
   lahiosoite varchar(30),
   postinro char(5),
   astili_luotu TIMESTAMP
-  DEFAULT CURRENT_TIMESTAMP not null, --constraint
-        email_uniikki unique (email));
+  DEFAULT CURRENT_TIMESTAMP not null);
+
+CREATE TABLE tilaus (
+ tilausnro INTEGER PRIMARY KEY auto_increment,
+ asnro INTEGER,
+ tilauspvm DATETIME NOT NULL,
+ tapa CHAR(1) NOT NULL,
+ tila CHAR(1),
+ tallennuspvm DATETIME,
+ FOREIGN KEY (asnro)
+ REFERENCES asiakas (asnro));
+
+ 
