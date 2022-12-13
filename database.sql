@@ -72,7 +72,7 @@ INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
  create table asiakas (
   asnro int primary key auto_increment,
   asnimi varchar(100) not null,
-  email varchar(30),
+  email varchar(30) UNIQUE,
   salasana varchar(100),
   lahiosoite varchar(30),
   postinro char(5),
@@ -93,3 +93,28 @@ INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
 
 INSERT INTO yllapitaja (sukunimi, etunimi, email, salasana)
  VALUES ("Sepponen", "Seppo", "seppo.yllapitaja@puhelintarvikekauppa.fi", "5eee07f847b11df294c4f7a6177ca7b0c7d524e7626c2bf3902caca9bb276f46");
+  DEFAULT CURRENT_TIMESTAMP not null);
+
+CREATE TABLE tilaus (
+ tilausnro INTEGER PRIMARY KEY auto_increment,
+ asnro INTEGER,
+ tilauspvm DATETIME NOT NULL,
+ tapa CHAR(1) NOT NULL,
+ tila CHAR(1),
+ tallennuspvm DATETIME,
+ FOREIGN KEY (asnro)
+ REFERENCES asiakas (asnro));
+
+
+-- en saanu muokattua tähän tota tuotenimee viiteavaimeks??
+CREATE TABLE tilausrivi (
+ tilausnro INTEGER,
+ rivinro SMALLINT,
+ tuotenimi VARCHAR(100) NOT NULL,
+ kpl INTEGER NOT NULL,
+ PRIMARY KEY (tilausnro, rivinro));
+
+ALTER TABLE tilausrivi
+  ADD FOREIGN KEY (tilausnro) REFERENCES tilaus(tilausnro); 
+
+
