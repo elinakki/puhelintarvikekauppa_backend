@@ -69,17 +69,6 @@ INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
 INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
  VALUES ("Vetoketjullinen Puhelinlompakko", 29, "Vetoketjullinen_Puhelinlompakko.jpg", "Koteloon mahtuu yleisesti ottaen kaikki alle 6,5 tuuman näytöllä varustetut puhelimet.", 3);
 
-
-
-
-
-
-
-
-
-
-
-
  create table asiakas (
   asnro int primary key auto_increment,
   asnimi varchar(100) not null,
@@ -88,6 +77,22 @@ INSERT INTO tuote (tuotenimi, hinta, image, kuvaus, trnro)
   lahiosoite varchar(30),
   postinro char(5),
   astili_luotu TIMESTAMP
+  DEFAULT CURRENT_TIMESTAMP not null, --constraint
+        email_uniikki unique (email));
+
+
+  create table yllapitaja (
+	 yllnro int primary key auto_increment,
+	 sukunimi varchar(30) not null,
+	 etunimi varchar(30) not null,
+	 email varchar(30) not null,
+	 salasana varchar(100) not null,
+	 tunnus_luotu TIMESTAMP DEFAULT CURRENT_TIMESTAMP not null,
+	 constraint yllnro_uniikki unique (yllnro),
+	 constraint email_uniikki unique (email));
+
+INSERT INTO yllapitaja (sukunimi, etunimi, email, salasana)
+ VALUES ("Sepponen", "Seppo", "seppo.yllapitaja@puhelintarvikekauppa.fi", "5eee07f847b11df294c4f7a6177ca7b0c7d524e7626c2bf3902caca9bb276f46");
   DEFAULT CURRENT_TIMESTAMP not null);
 
 CREATE TABLE tilaus (
