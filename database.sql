@@ -101,7 +101,7 @@ CREATE TABLE tilaus (
  REFERENCES asiakas (asnro));
 
 
--- sain tän vaan ilman viiteavain määrittelyjä ajettua oikein jostain syystä
+-- en saanu muokattua tähän tota tuotenimee viiteavaimeks??
 CREATE TABLE tilausrivi (
  tilausnro INTEGER,
  rivinro SMALLINT,
