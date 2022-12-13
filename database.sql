@@ -109,4 +109,7 @@ CREATE TABLE tilausrivi (
  kpl INTEGER NOT NULL,
  PRIMARY KEY (tilausnro, rivinro));
 
+ALTER TABLE tilausrivi
+  ADD FOREIGN KEY (tilausnro) REFERENCES tilaus(tilausnro); 
+
 
