@@ -116,5 +116,3 @@ CREATE TABLE tilausrivi (
 
 ALTER TABLE tilausrivi
   ADD FOREIGN KEY (tilausnro) REFERENCES tilaus(tilausnro); 
-
-
