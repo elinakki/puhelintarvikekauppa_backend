@@ -4,22 +4,22 @@ require_once('../inc/headers.php');
 
 $uri = parse_url(filter_input(INPUT_SERVER,'PATH_INFO'),PHP_URL_PATH);
 $parameters = explode('/',$uri);
-$category_id = $parameters[1];
+$trnro = $parameters[1];
 
 try {
-  $db = openDb();
-  $sql = "select * from category where id = $category_id";
+  $db = openDbConnection();
+  $sql = ("select * from tuoteryhma where trnro = $trnro");
   $query = $db->query($sql);
   $category = $query->fetch(PDO::FETCH_ASSOC);
 
-  $sql = "select * from product where category_id = $category_id";
+  $sql = ("select * from tuote where trnro = $trnro");
   $query = $db->query($sql);
   $products = $query->fetchAll(PDO::FETCH_ASSOC);
 
   header('HTTP/1.1 200 OK');
   echo json_encode(array(
-    "category" => $category['name'],
-    "products" => $products
+    "tuoteryhma" => $trnro['name'],
+    "tuote" => $tuote
   ));
 }
 catch (PDOException $pdoex) {
