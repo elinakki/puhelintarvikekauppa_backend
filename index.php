@@ -1,0 +1,9 @@
+<?php
+require('../inc/functions.php');
+require('../inc/headers.php');
+require('../inc/maintenance.php');
+require('../products/addCategory.php');
+require('../products/getcategories.php');
+require('../products/getproduct.php');
+require('../products/getproducts.php');
+?>
