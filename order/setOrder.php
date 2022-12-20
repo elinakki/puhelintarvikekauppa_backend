@@ -5,33 +5,25 @@ require_once('../inc/headers.php');
 
 $db = null;
 
-// input-tiedostot JSON
 $input = json_decode(file_get_contents('php://input'));
-$etunimi = filter_var($input->etunimi,FILTER_SANITIZE_STRING);
-$sukunimi = filter_var($input->sukunimi,FILTER_SANITIZE_STRING);
+$nimi = filter_var($input->nimi,FILTER_SANITIZE_STRING);
 $email = filter_var($input->email,FILTER_SANITIZE_STRING);
 $lahiosoite = filter_var($input->lahiosoite,FILTER_SANITIZE_STRING);
-$postinro = filter_var($input->postinro,FILTER_SANITIZE_STRING);
-$cart = $input->cart;
-$user = $input->user;
+$postinro = filter_var($input->$postinro,FILTER_SANITIZE_STRING);
 
 try {
     $db = openDb();
     $db->beginTransaction();
 
-        //uusi asiakas asiakastauluun
-        $sql = "insert into asiakas (etunimi, sukunimi, email, lahiosoite, postinro) values ('$etunimi','$sukunimi','$email','$lahiosoite','$postinro')";
+        $sql = "insert into asiakas (asnimi, email, lahiosoite, postinro) values ('$nimi','$email','$lahiosoite','$postinro')";
 
-        //executeInsert asiakkaan asiakasnron
-        $asiakasnro = executeInsert($db,$sql);
+        $asnro = executeInsert($db,$sql);
     
-    //uusi tilaus
-    $sql = "insert into tilaus (asnro) values ($asiakasnro)";
+    $sql = "insert into tilaus (asnro) values ($asnro)";
     $tilausnro = executeInsert($db,$sql);
 
-    //tilausrivitauluun rivit
     $rivinro = 1;
-    foreach ($cart as $tuote) {
+    foreach ($tilaus as $tuote) {
         $sql = "insert into tilausrivi (tilausnro,rivinro,tuotenro,kpl) values ($tilausnro,$rivinro,$tuote->tuotenro,$tuote->amount)";
         executeInsert($db,$sql);
         $rivinro++;
