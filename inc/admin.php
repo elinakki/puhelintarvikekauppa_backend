@@ -1,6 +1,6 @@
 <?php
-require_once '../inc/functions.php';
-require_once '../inc/headers.php';
+require_once('../inc/functions.php');
+require_once('../inc/headers.php');
 
 //ylläpitäjä voi lisätä uuden kategorian
 $input = json_decode(file_get_contents('php://input'));

@@ -1,6 +1,6 @@
 <?php
-require_once '../inc/headers.php';
-require_once '../inc/functions.php';
+require_once('../inc/headers.php');
+require_once('../inc/functions.php');
 
 $tuotenimi = filter_input(INPUT_POST,"tuotenimi",FILTER_UNSAFE_RAW);
 $hinta = filter_input(INPUT_POST,"hinta",FILTER_UNSAFE_RAW);

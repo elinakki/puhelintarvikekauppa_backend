@@ -1,6 +1,6 @@
 <?php
-require_once '../inc/functions.php';
-require_once '../inc/headers.php';
+require_once('../inc/functions.php');
+require_once('../inc/headers.php');
 
 $input = json_decode(file_get_contents('php://input'));
 $tuotenro = filter_var($input->tuotenro,FILTER_SANITIZE_NUMBER_INT);
