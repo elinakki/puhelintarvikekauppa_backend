@@ -7,7 +7,7 @@ $parameters = explode('/',$uri);
 $trnro = $parameters[1];
 
 try {
-  $db = openDbConnection();
+  $db = openDb();
   $sql = ("select * from tuoteryhma where trnro = $trnro");
   $query = $db->query($sql);
   $category = $query->fetch(PDO::FETCH_ASSOC);
