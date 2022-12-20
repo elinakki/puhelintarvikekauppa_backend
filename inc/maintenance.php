@@ -3,9 +3,8 @@ header('HTTP/1.1 503 Service Temporarily Unavailable');
 header('Retry-After: 3600');
 header(($_SERVER['SERVER_PROTOCOL'] ?? 'HTTP/1.0').' 503 Service Temporarily Unavailable',true,503);
 header('Retry-After: 3600');
-header('X-Powered-By:'); //hide PHP
+header('X-Powered-By:');
 ?><!DOCTYPE html>
-<!-- Source: https://www.wmtips.com/html/howto-make-a-perfect-site-maintenance-page.htm -->
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
